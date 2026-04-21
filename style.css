@@ -1,0 +1,140 @@
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: colorCycle 6s ease infinite;
+    border: 2px solid #0077ff;
+    transition: transform 0.2s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+}
+
+p {
+    color: #555;
+    font-size: 0.95rem;
+}
+.btn:hover {
+    box-shadow: 0 0 20px rgba(0, 119, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+
+    background: linear-gradient(270deg, #0077ff, #00c6ff, #7b2cff, #00c6ff);
+    background-size: 600%;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: colorCycle 6s ease infinite;
+    border: 2px solid #0077ff;
+}
+
+/* Button container */
+.controls {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* Modern glassy buttons */
+.btn-alt {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    
+    background: linear-gradient(270deg, #0077ff, #00c6ff, #7b2cff, #00c6ff);
+    background-size: 600%;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: colorCycle 6s ease infinite;
+    border: 2px solid #0077ff;
+}
+
+/* Hover = lift + glow */
+.btn-alt:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 119, 255, 0.6);
+}
+
+/* Click = press effect */
+.btn-alt:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 119, 255, 0.4);
+}
+
+@keyframes colorCycle {
+    0% {
+        background-position: 0%
+    }
+
+    50% {
+        background-position: 100%
+    }
+
+    100% {
+        background-position: 0%
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    border-color: #00c6ff;
+}
+
+body.dark-mode p {
+    color: #ccc;
+}
