@@ -1,0 +1,5 @@
+Added two interactive features to my webpage. 
+The first feature is a button that switches the product image when clicked, demonstrating how JavaScript can update elements dynamically.
+The second feature is a dark mode toggle that changes the page’s appearance by adding and removing a CSS class. 
+I used JavaScript concepts such as event listeners to detect user interactions, functions to execute actions, and DOM manipulation to update 
+the image source and modify the page’s styling.
